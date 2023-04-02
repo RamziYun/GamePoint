@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="eet">
+    <link rel="eet" href="style.css">
+    <link rel="shortcut icon" href="../images/esport_logo.avif" type="image/x-icon">
+    <title>GamePoint</title>
+    <style>
+        @font-face {
+            font-family: "Lato";
+            src: url();
+        }
+
+        body {
+            margin: 0px auto;
+            width: 100%;
+            position: relative;
+            max-height: 100vh;
+            overflow: auto;
+        }
+
+        /*              НАВБАР                          */
+
+        .navbar {
+            display: flex;
+            width: 100%;
+            height: 65px;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            z-index: 10;
+            background-image: linear-gradient(to left top, orange, #fae102);
+        }
+
+        .navbar__burger {
+            display: none;
+        }
+
+        .navbar__logo_block {
+            display: flex;
+            width: 210px;
+            margin-left: -110px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar__logo {
+            width: 56px;
+            border-radius: 5px;
+        }
+
+        .navbar__logo_name {
+            display: flex;
+            width: 140px;
+            font-size: 24px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .navbar__menu {
+            width: 680px;
+        }
+
+        .menu__modal {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .page_link {
+            font-family: 'Roboto', sans-serif;
+            color: #000000;
+            transition: 0.2s;
+        }
+
+        .page_link:hover {
+            color: #575555;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .language {
+            display: flex;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            color: #000000;
+        }
+
+        .change_language {
+            display: flex;
+            width: 86px;
+            height: 30px;
+            border-radius: 5px;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+            transition: 0.2s;
+        }
+
+        .change_language:hover {
+            margin-top: -5px;
+            cursor: pointer;
+            box-shadow: 0px 5px 8px #000000;
+        }
+
+        .change_language:active {
+            margin-top: 0px;
+            cursor: pointer;
+            box-shadow: none;
+        }
+
+        .language__modal {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            top: 0;
+        }
+
+        .change_language__modal {
+            position: absolute;
+            right: 58px;
+            top: 52px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px black;
+            border: 1px solid black;
+            background-color: #ffffff;
+        }
+
+        .language__option {
+            display: flex;
+            width: 70px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 8px;
+            transition: 0.2s;
+        }
+
+        .language__option:hover {
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+
+        .flag {
+            width: 25px;
+            height: 15px;
+        }
+
+        .arrow_down {
+            width: 16px;
+        }
+
+        .news {
+            display: flex;
+            background-image: url(../images/black_background.png);
+            justify-content: space-between;
+        }
+
+        /*                      НАВИГАЦИЯ ПО ИГРАМ                */
+
+        .news__menu_news {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .news__menu-games {
+            width: 870px;
+            height: 78px;
+            display: flex;
+            margin: 85px 0px 30px;
+            padding-left: 60px;
+            flex-wrap: wrap;
+            position: relative;
+            background-color: #ff4f00;
+        }
+
+        .news__menu-games::after {
+            display: block;
+            content: '';
+            width: 30px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            background: linear-gradient(to bottom right, #ff4f00 50%, transparent 52%);
+        }
+
+        .news__logo-games {
+            font-family: 'Roboto', sans-serif;
+            color: #000000;
+            letter-spacing: 1.2px;
+            font-size: 16px;
+            font-weight: 700;
+            margin-left: 60px;
+        }
+
+        .news__span-games {
+            height: 1px;
+            width: 780px;
+            margin-top: 3px;
+            background-color: #000000;
+        }
+
+        .news__games {
+            display: flex;
+            height: 40px;
+            width: 650px;
+            margin: 8px 45px;
+            justify-content: space-between;
+        }
+
+        .news__game {
+            display: flex;
+            height: 40px;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ff4000;
+            transition: 0.2s;
+        }
+
+        .news__game:hover {
+            margin-top: -3px;
+            box-shadow: 0px 5px 10px black;
+            cursor: pointer;
+        }
+
+        .news__game:active {
+            margin-top: 0px;
+            box-shadow: none;
+        }
+
+        .news__game-name {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            color: #000000;
+            font-size: 15px;
+            margin: auto 5px auto 5px;
+        }
+
+        .news__game-icon {
+            margin-left: 3px;
+        }
+
+        .dota-2-icon {
+            width: 40px;
+            height: 35px;
+        }
+
+        .cs-go-icon {
+            width: 55px;
+        }
+
+        .pubg-icon {
+            width: 48px;
+        }
+
+        .lol-icon {
+            width: 64px;
+        }
+
+        .news__arrow_down {
+            width: 18px;
+            margin: auto 8px auto -10px;
+        }
+
+        /*                   НАВИГАЦИЯ ПО ТУРНИРАМ               */
+
+        .tournaments {
+            display: flex;
+            flex-direction: column;
+            width: 320px;
+            margin: 85px 30px auto auto;
+            border-radius: 4px;
+            opacity: 0.9;
+            box-shadow: 0px 0px 20px #000000;
+            background: #ffffff;
+        }
+
+        .search {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 16px;
+            height: 44px;
+        }
+
+        .searchImg {
+            fill: rgb(83, 100, 113);
+            width: 20px;
+        }
+
+        .searchInput {
+            border: none;
+            background: transparent;
+            margin-left: 14px;
+            outline: none;
+
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            color: #5B7083;
+        }
+
+        .news__span-tournaments {
+            height: 1px;
+            width: 280px;
+            margin: auto;
+            background-color: #5B7083;
+        }
+
+        .tournaments__logo {
+            height: 24px;
+            display: flex;
+            align-items: center;
+            padding: 10px 16px 5px;
+
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 20px;
+            color: #0F1419;
+        }
+
+        .tournaments__lists {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            outline-style: none;
+        }
+
+        .tournament__post {
+            display: flex;
+            justify-content: flex-start;
+            padding: 15px 16px;
+            transition: 0.2s;
+        }
+
+        .tournament__post:hover {
+            background-color: rgba(0, 0, 0, 0.06);
+            cursor: pointer;
+        }
+
+        .tournament_description {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        .tournament_name {
+            margin-bottom: 2px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            color: #0F1419;
+        }
+
+        .tournament_time {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #5B7083;
+        }
+
+        .tournament__show_all {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 12px 20px;
+            height: 28px;
+            outline-style: none;
+            border-radius: 0px 0px 20px 20px;
+            transition-duration: 0.2s;
+        }
+
+        .tournament__show_all:hover {
+            background-color: rgba(0, 0, 0, 0.06);
+            cursor: pointer;
+        }
+
+        /*                            ПОСТЫ                             */
+
+        .news__posts {
+            display: flex;
+            flex-direction: column;
+            width: 880px;
+            opacity: 0.9;
+            border-radius: 4px;
+            box-shadow: 0px 0px 20px #000000;
+            background-color: #ffffff;
+        }
+
+        .posts__navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-left: 100px;
+        }
+
+        .posts__navigation {
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            padding: 12px 12px;
+            transition: 0.2;
+        }
+
+        .posts__navigation:hover {
+            color: #575555;
+            cursor: pointer;
+        }
+
+        .news__span-news {
+            height: 1px;
+            width: 800px;
+            margin: 0px auto;
+            background-color: #000000;
+        }
+
+        .post {
+            width: 800px;
+            margin: 15px auto auto 35px;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, .2);
+            border-radius: 4px;
+            transition: 0.2s;
+            background-color: #f7f6f2;
+        }
+
+        .post:hover {
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+        }
+
+        .post__separation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+
+        .post__main {
+            height: 100%;
+            width: 750px;
+        }
+
+        .post__name {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin: auto auto 10px 5px;
+            width: 700px;
+        }
+
+        .post__info {
+            display: flex;
+            width: 730px;
+            justify-content: space-between;
+            margin: 5px 0px 12px;
+        }
+
+        .post__time {
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            color: rgb(83, 100, 113);
+        }
+
+        .post__comment-icon {
+            width: 15px;
+            fill: rgb(83, 100, 113);
+        }
+
+        .post__comments {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 32px;
+        }
+
+        .teams__modal {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            top: 0;
+        }
+
+        .teams__lists {
+            position: absolute;
+            right: 336px;
+            top: 52px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px black;
+            border: 1px solid black;
+            background-color: #ffffff;
+        }
+
+        .team__option {
+            padding: 8px 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #000000;
+            transition: 0.2s;
+        }
+
+        .team__option:hover {
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+
+        /*                        РЕГИСТРАЦИЯ                              */
+
+        .registration__modal {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.55);
+            transform: scale(1);
+            display: none;
+            justify-content: center;
+            z-index: 1000;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+        }
+
+        .reg__content {
+            border-radius: 16px;
+            padding: 10px 20px;
+            margin: 70px auto auto;
+            width: 550px;
+            height: 500px;
+            box-shadow: #000 0 30px 60px;
+            background-color: #fff;
+        }
+
+        .cross {
+            width: 30px;
+            padding: 10px;
+            border-radius: 9999px;
+            transition: 0.2s;
+        }
+
+        .cross:hover {
+            cursor: pointer;
+            background-color: rgba(15, 20, 25, 0.1);
+        }
+
+        .reg__name {
+            display: flex;
+            justify-content: space-between;
+            width: 520px;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 47px;
+            margin: 15px 30px 10px 25px;
+            color: #000;
+        }
+
+        .input {
+            width: 480px;
+            height: 50px;
+            background-color: #ffffec;
+            border: 1px solid #ececff;
+            border-radius: 5px;
+            box-shadow: -1px 0 8px -5px #000;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 21px;
+            color: #536471;
+            margin: 8px 30px 16px;
+            padding-left: 12px;
+            transition: 0.2s;
+        }
+
+        .input:hover {
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid #ff4f00;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+        }
+
+        .reg__email_example {
+            margin-left: 30px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+        }
+
+        .reg__change_info {
+            width: 160px;
+            margin-left: 30px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            transition: 0.1s;
+        }
+
+        .reg__change_info:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            color: rgb(83, 100, 113);
+        }
+
+        .birth__logo {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            margin: 20px 30px 5px;
+            color: #000;
+        }
+
+        .birth__block {
+            display: flex;
+            margin-left: 30px;
+        }
+
+        .birth__select {
+            display: flex;
+            justify-content: center;
+            width: 55px;
+            height: 30px;
+            padding-left: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 5px;
+            border-radius: 5px;
+            background-color: #ffffec;
+            box-shadow: -1px 0 8px -5px #000;
+            border: 1px solid #ff4f00;
+        }
+
+        .birth__select:hover {
+            cursor: pointer;
+            background-color: #ffffec;
+        }
+
+        .birth__text {
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #000;
+            opacity: 0.6;
+            margin: 0px 0px 30px 30px;
+        }
+
+        .reg__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .reg__ready_button {
+            width: 180px;
+            height: 40px;
+            margin-right: 25px;
+            background: #ff4f00;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            border: none;
+            color: #ffffff;
+            transition: 0.2s;
+        }
+
+        .reg__ready_button:hover {
+            cursor: pointer;
+            background: #ff4000;
+        }
+
+        .login__modal {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.55);
+            display: none;
+            justify-content: center;
+            z-index: 1000;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+        }
+
+        .login__content {
+            border-radius: 16px;
+            padding: 10px 20px;
+            margin: 120px auto auto;
+            width: 550px;
+            height: 340px;
+            box-shadow: #000 0 30px 60px;
+            background-color: #fff;
+        }
+
+        .login__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        /*                        МЕДИА ЗАПРОСЫ                        */
+
+        @media (max-width:420px) {
+            .navbar {
+                height: 30px;
+            }
+
+            .navbar__logo {
+                width: 25px;
+            }
+
+            .navbar__logo_name {
+                font-size: 15px;
+            }
+
+            .navbar__menu {
+                display: none;
+                width: 100%;
+                height: 100%;
+                z-index: 1000;
+                position: fixed;
+                top: 0%;
+                left: 0%;
+                background-color: rgba(0, 0, 0, 0.55);
+            }
+
+            .menu__modal {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                width: 50%;
+                height: 200px;
+                background-color: #fff;
+                top: 0%;
+                left: 0%;
+                border-bottom-right-radius: 5px;
+                box-shadow: 0px 0px 5px #000;
+            }
+
+            .page_link {
+                padding: 10px 20px;
+                transition: 0.2s;
+            }
+
+            .page_link:hover {
+                background-color: rgba(0, 0, 0, 0.06);
+            }
+
+            .teams__lists {
+                right: 80px;
+                top: 100px;
+            }
+
+            .navbar__logo_block {
+                width: 170px;
+                margin-left: 0px;
+            }
+
+            .header__burger {
+                display: block;
+                position: relative;
+                width: 25px;
+                height: 20px;
+                cursor: pointer;
+            }
+
+            .header__burger::after {
+                content: "";
+                background-color: #ff4f00;
+                box-shadow: 0px 0px 4px #000;
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                margin: 0px 7px 0px 5px;
+                left: 0;
+                bottom: 0;
+                border-radius: 50px;
+            }
+
+            .header__burger::before {
+                content: "";
+                background-color: #ff4f00;
+                box-shadow: 0px 0px 4px #000;
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                margin: 0px 7px 4px 5px;
+                left: 0;
+                top: 0;
+                border-radius: 50px;
+            }
+
+            .header__burger span {
+                background-color: #ff4f00;
+                box-shadow: 0px 0px 4px #000;
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                margin: 0px 7px 4px 5px;
+                left: 0;
+                top: 9px;
+                border-radius: 50px;
+            }
+
+            .change_language {
+                width: 75px;
+                height: 20px;
+            }
+
+            .change_language__modal {
+                right: 18px;
+                top: 30px;
+            }
+
+            .language__option {
+                width: 59px;
+            }
+
+            .flag {
+                width: 20px;
+                height: 12px;
+            }
+
+            .news__menu_news {
+                align-items: flex-start;
+            }
+
+            .news__menu-games {
+                width: 85%;
+                height: 50px;
+                margin: 45px 0px 0px;
+                padding-left: 10px;
+            }
+
+            .news__logo-games {
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+
+            .news__span-games {
+                display: none;
+            }
+
+            .news__games {
+                width: 300px;
+                margin: 3px 30px;
+            }
+
+            .news__game {
+                height: 30px;
+                padding: 0px 5px;
+            }
+
+            .news__game-name {
+                display: none;
+            }
+
+            .news__game-icon {
+                margin-left: 0px;
+            }
+
+            .dota-2-icon {
+                width: 20px;
+                height: 18px;
+            }
+
+            .cs-go-icon {
+                width: 35px;
+            }
+
+            .pubg-icon {
+                width: 25px;
+            }
+
+            .lol-icon {
+                width: 35px;
+            }
+
+            .news__arrow_down {
+                margin: 0px;
+            }
+
+            .tournaments {
+                display: none;
+            }
+
+            .news__posts {
+                width: 94%;
+                margin: 10px;
+            }
+
+            .posts__navbar {
+                margin-left: 30px;
+            }
+
+            .posts__navigation {
+                font-size: 13px;
+                padding: 8px 10px;
+            }
+
+            .news__span-news {
+                width: 320px;
+            }
+
+            .post {
+                width: 95%;
+                margin: 10px auto auto 8px;
+            }
+
+            .post__name {
+                font-size: 13px;
+                width: 95%;
+                margin: 5px 0px;
+                font-weight: 400;
+            }
+
+            .dota__img {
+                width: 95%;
+            }
+
+            .post__main {
+                width: 100%;
+            }
+
+            .post__info {
+                width: 95%;
+            }
+
+            .post__time {
+                font-size: 10px;
+            }
+
+            .post__comment-icon {
+                width: 12px;
+            }
+
+            .post__comments {
+                width: 25px;
+            }
+
+            .reg__content {
+                width: 80%;
+                height: 450px;
+            }
+
+            .reg__name {
+                width: 90%;
+                font-size: 25px;
+                margin: 5px 0px 15px 25px;
+            }
+
+            .input {
+                width: 80%;
+                height: 40px;
+                font-size: 15px;
+                margin: 4px 22px 10px;
+                padding-left: 8px;
+            }
+
+            .birth__logo {
+                font-size: 14px;
+                margin: 15px 22px 5px;
+            }
+
+            .reg__email_example {
+                margin-left: 22px;
+                font-size: 12px;
+            }
+
+            .birth__text {
+                font-size: 14px;
+                line-height: 19px;
+            }
+
+            .reg__change_info {
+                margin-left: 22px;
+                font-size: 13px;
+            }
+
+            .reg__ready_button {
+                width: 40%;
+                height: 30px;
+                font-size: 15px;
+            }
+
+            .login__content {
+                width: 80%;
+                height: 275px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div id="burger" class="header__burger">
+            <span></span>
+        </div>
+        <div class="navbar__logo_block">
+            <img src="../images/esport_logo.avif" alt="" class="navbar__logo">
+            <div class="navbar__logo_name">MoMent for Esports</div>
+        </div>
+        <div id="navbar__menu" class="navbar__menu">
+            <div class="menu__modal">
+                <a id="reg" class="page_link">Вход и регистрация</a>
+                <a class="page_link">Новости</a>
+                <a class="page_link">Турниры</a>
+                <a id="teams__button" class="page_link">Команды</a>
+                <a class="navbar__about_us page_link">О нас</a>
+            </div>
+        </div>
+        <button id="change__language" class="change_language">
+            <div class="language">Ру</div>
+            <img class="flag"
+                src="https://wiki.lingvoforum.net/wiki/images/9/98/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8.png"
+                alt="">
+            <img src="images/arrow_down.png" alt="" class="arrow_down">
+        </button>
+    </div>
+    <div class="news">
+        <div class="news__menu_news">
+            <div class="news__menu-games">
+                <div class="news__logo-games">Выбери свою игру!</div>
+                <div class="news__span-games"></div>
+                <div class="news__games">
+                    <div class="news__game">
+                        <img src="images/dota.png" class="news__game-icon dota-2-icon"></img>
+                        <div class="news__game-name dota-2">Dota 2</div>
+                    </div>
+                    <div class="news__game">
+                        <img src="images/cs-go.png" class="news__game-icon cs-go-icon"></img>
+                        <div class="news__game-name cs-go">CS GO</div>
+                    </div>
+                    <div class="news__game">
+                        <img src="images/pubg3.png" class="news__game-icon pubg-icon"></img>
+                        <div class="news__game-name pubg">Pubg</div>
+                    </div>
+                    <div class="news__game">
+                        <img src="images/lol.png" class="news__game-icon lol-icon"></img>
+                        <div class="news__game-name pubg">League of Legends</div>
+                    </div>
+                    <div class="news__game">
+                        <div class="news__game-name pubg" style="margin: auto 10px auto 10px;">Еще</div>
+                        <img src="images/keyboard_arrow_down_48px.svg.png" alt="" class="news__arrow_down">
+                    </div>
+                </div>
+            </div>
+            <div class="news__posts">
+                <div class="posts__navbar">
+                    <div id="recommendations" class="posts__navigation">Рекомендации</div>
+                    <div id="news" class="posts__navigation">Новое</div>
+                    <div id="discussed" class="posts__navigation">Обсуждаемое</div>
+                </div>
+                <div class="news__span-news"></div>
+                <div class="post">
+                    <div class="post__separation">
+                        <img src="images/dota.png" class="news__game-icon dota-2-icon"
+                            style="margin: 5px 10px auto 10px;"></img>
+                        <div class="post__main">
+                            <div class="post__name">Игрок DPC сдался сразу после смерти и типнул тиммейта — комментаторы
+                                не смогли сдержать смех</div>
+                            <img class="dota__img"
+                                src="https://virtus-img.cdnvideo.ru/images/material-card/plain/78/7887b3b1-26ce-4a8b-a7a2-ffd8a9267fac.png"
+                                alt="">
+                            <div class="post__info">
+                                <span class="post__time">30.03 в 12:21</span>
+                                <div class="post__comments">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="post__comment-icon">
+                                        <g>
+                                            <path
+                                                d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="post__time">16</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post__separation">
+                        <img src="images/dota.png" class="news__game-icon dota-2-icon"
+                            style="margin: 5px 10px auto 10px;"></img>
+                        <div class="post__main">
+                            <div class="post__name">Игрок DPC сдался сразу после смерти и типнул тиммейта — комментаторы
+                                не смогли сдержать смех</div>
+                            <img class="dota__img"
+                                src="https://virtus-img.cdnvideo.ru/images/material-card/plain/78/7887b3b1-26ce-4a8b-a7a2-ffd8a9267fac.png"
+                                alt="">
+                            <div class="post__info">
+                                <span class="post__time">30.03 в 12:21</span>
+                                <div class="post__comments">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="post__comment-icon">
+                                        <g>
+                                            <path
+                                                d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="post__time">16</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post__separation">
+                        <img src="images/dota.png" class="news__game-icon dota-2-icon"
+                            style="margin: 5px 10px auto 10px;"></img>
+                        <div class="post__main">
+                            <div class="post__name">Игрок DPC сдался сразу после смерти и типнул тиммейта — комментаторы
+                                не смогли сдержать смех</div>
+                            <img class="dota__img"
+                                src="https://virtus-img.cdnvideo.ru/images/material-card/plain/78/7887b3b1-26ce-4a8b-a7a2-ffd8a9267fac.png"
+                                alt="">
+                            <div class="post__info">
+                                <span class="post__time">30.03 в 12:21</span>
+                                <div class="post__comments">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="post__comment-icon">
+                                        <g>
+                                            <path
+                                                d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="post__time">16</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post__separation">
+                        <img src="images/dota.png" class="news__game-icon dota-2-icon"
+                            style="margin: 5px 10px auto 10px;"></img>
+                        <div class="post__main">
+                            <div class="post__name">Игрок DPC сдался сразу после смерти и типнул тиммейта — комментаторы
+                                не смогли сдержать смех</div>
+                            <img class="dota__img"
+                                src="https://virtus-img.cdnvideo.ru/images/material-card/plain/78/7887b3b1-26ce-4a8b-a7a2-ffd8a9267fac.png"
+                                alt="">
+                            <div class="post__info">
+                                <span class="post__time">30.03 в 12:21</span>
+                                <div class="post__comments">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="post__comment-icon">
+                                        <g>
+                                            <path
+                                                d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span class="post__time">16</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tournaments">
+            <div class="search">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="searchImg">
+                    <g>
+                        <path
+                            d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z">
+                        </path>
+                    </g>
+                </svg>
+                <input placeholder="Искать матч" type="text" class="searchInput" />
+            </div>
+            <div class="news__span-tournaments"></div>
+            <div class="tournaments__logo">Турниры</div>
+            <div class="tournaments__lists">
+                <div class="tournament__post">
+                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
+                    <div class="tournament_description">
+                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
+                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
+                    </div>
+                </div>
+                <div class="news__span-tournaments"></div>
+                <div class="tournament__post">
+                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
+                    <div class="tournament_description">
+                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
+                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
+                    </div>
+                </div>
+                <div class="news__span-tournaments"></div>
+                <div class="tournament__post">
+                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
+                    <div class="tournament_description">
+                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
+                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
+                    </div>
+                </div>
+                <div class="news__span-tournaments"></div>
+                <div class="tournament__post">
+                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
+                    <div class="tournament_description">
+                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
+                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
+                    </div>
+                </div>
+                <div class="news__span-tournaments"></div>
+                <div class="tournament__post">
+                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
+                    <div class="tournament_description">
+                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
+                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
+                    </div>
+                </div>
+                <div class="news__span-tournaments"></div>
+            </div>
+            <div class="tournament__show_all">
+                <a class="page_link">Все турниры</a>
+            </div>
+        </div>
+    </div>
+    <div id="change_language__modal" class="language__modal">
+        <div class="change_language__modal">
+            <div class="language__option">
+                <div class="language">En</div>
+                <img class="flag" src="https://pngicon.ru/file/uploads/Flag-SShA.png" alt="">
+            </div>
+            <div class="language__option">
+                <div class="language">Oʻz</div>
+                <img class="flag" src="https://abali.ru/wp-content/uploads/2014/04/flag_uzbekistana.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="teams__modal" class="teams__modal">
+        <div class="teams__lists">
+            <div class="team__option">Рейтинг команд</div>
+            <div class="team__option">Моя команда</div>
+        </div>
+    </div>
+    <div id="registration__modal" class="registration__modal">
+        <div class="reg__content">
+            <h1 class="reg__name">Создать аккаунт<svg viewBox="0 0 24 24" aria-hidden="true" id="reg__cross"
+                    class="cross">
+                    <g>
+                        <path
+                            d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z">
+                        </path>
+                    </g>
+                </svg></h1>
+            <input id="nick" minlength="8" maxlength="15" placeholder="Никнейм (8-15 символов)" class="input" />
+            <div class="reg__email_example">Пример: <span style="color: #ff4f00;">dmitriyribakov1989@gmail.com</span>
+            </div>
+            <input id="email" maxlength="25" placeholder="Электронная почта" class="input" />
+            <input id="password" minlength="8" maxlength="15" placeholder="Пароль (8-15 символов)" class="input" />
+            <h4 class="birth__logo">Укажите свой возраст</h4>
+            <div class="birth__block">
+                <input id="age" type="number" class="birth__select">
+                <div class="birth__text">Если вам меньше 16 лет, то мы не можем предоставить вам полное пользование
+                    сайтом.
+                </div>
+            </div>
+            <div class="reg__bottom">
+                <div id="login" class="reg__change_info">Уже есть аккаунт?</div>
+                <button id="ready" class="reg__ready_button">Готово</button>
+            </div>
+        </div>
+    </div>
+    <div id="login__modal" class="login__modal">
+        <div class="login__content">
+            <h1 class="reg__name">С возвращением!<svg viewBox="0 0 24 24" aria-hidden="true" id="login__cross"
+                    class="cross">
+                    <g>
+                        <path
+                            d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z">
+                        </path>
+                    </g>
+                </svg></h1>
+            <input id="login__email" maxlength="30" placeholder="Электронная почта" class="input" />
+            <input id="login__password" minlength="8" maxlength="15" placeholder="Пароль" class="input" />
+            <div class="reg__change_info">Забыли пароль?</div>
+            <div class="login__bottom">
+                <div id="reg__button" class="reg__change_info">Впервые у нас?</div>
+                <button id="login__button" class="reg__ready_button">Войти</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
