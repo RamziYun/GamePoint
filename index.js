@@ -22,6 +22,8 @@ window.onclick = function (e) {
     } else if (e.target == navbar__menu) {
         navbar__menu.style.display = "none";
         body.style.overflow = "auto";
+    } else if (e.target == reg_log__modal) {
+        reg_log__modal.style.display = "none";
     }
 };
 
@@ -37,7 +39,8 @@ teams__button.onclick = function () {
 let registration__modal = document.getElementById('registration__modal'),
     reg__cross = document.getElementById('reg__cross'),
     reg = document.getElementById('reg'),
-    reg__button = document.getElementById('reg__button');
+    reg__button = document.getElementById('reg__button'),
+    reg__login = document.getElementById('reg__login');
 
 reg.onclick = function () {
     registration__modal.style.display = "block";
@@ -47,6 +50,11 @@ reg.onclick = function () {
 reg__cross.onclick = function () {
     registration__modal.style.display = "none";
     body.style.overflow = "auto";
+};
+
+reg__login.onclick = function () {
+    login__modal.style.display = "block";
+    registration__modal.style.display = "none";
 };
 
 
@@ -78,22 +86,22 @@ let nick = document.getElementById('nick'),
 
 ready.onclick = function () {
     if (15 < nick.value.length || nick.value.length < 8) {
-        nick.style.border = "2px solid #800000";
+        nick.style.border = "1px solid #bd0000";
     }
     if (15 < password.value.length || password.value.length < 8) {
-        password.style.border = "2px solid #800000";
+        password.style.border = "1px solid #bd0000";
     }
     if (30 < email.value.length || email.value.length < 16) {
-        email.style.border = "2px solid #800000";
+        email.style.border = "1px solid #bd0000";
     }
     if (age.value < 16 || age.value > 100) {
-        age.style.border = "2px solid #800000";
+        age.style.border = "1px solid #bd0000";
     }
     if ((15 >= nick.value.length && nick.value.length >= 8) && (15 >= password.value.length && password.value.length >= 8) && (35 >= email.value.length && email.value.length >= 12) && (age.value >= 16 && age.value <= 100)) {
         nick.style.border = "none";
         password.style.border = "none";
         email.style.border = "none";
-        age.style.border = "1px solid #ff4f00";
+        age.style.border = "1px solid #bd0000";
         registration__modal.style.display = "none";
     }
 };
@@ -105,10 +113,10 @@ let login__button = document.getElementById('login__button'),
 
 login__button.onclick = function () {
     if (15 < login__password.value.length || login__password.value.length < 8) {
-        login__password.style.border = "2px solid #800000";
+        login__password.style.border = "1px solid #bd0000";
     }
     if (30 < login__email.value.length || login__email.value.length < 16) {
-        login__email.style.border = "2px solid #800000";
+        login__email.style.border = "1px solid #bd0000";
     }
     if ((15 >= login__password.value.length && login__password.value.length >= 8) && (35 >= login__email.value.length && login__email.value.length >= 12)) {
         login__password.style.border = "none";
@@ -131,25 +139,47 @@ let recommendations = document.getElementById('recommendations'),
     news = document.getElementById('news'),
     discussed = document.getElementById('discussed'),
     border__bottom = 1;
-    recommendations.style.borderBottom = "2px solid #ff4f00";
+    recommendations.style.borderBottom = "2px solid #bd0000";
 
 recommendations.onclick = function () {
-    recommendations.style.borderBottom = "2px solid #ff4f00";
+    recommendations.style.borderBottom = "2px solid #bd0000";
     news.style.borderBottom = "none";
     discussed.style.borderBottom = "none";
     border__bottom = 1;
 };
 
 news.onclick = function () {
-    news.style.borderBottom = "2px solid #ff4f00";
+    news.style.borderBottom = "2px solid #bd0000";
     recommendations.style.borderBottom = "none";
     discussed.style.borderBottom = "none";
     border__bottom = 2;
 };
 
 discussed.onclick = function () {
-    discussed.style.borderBottom = "2px solid #ff4f00";
+    discussed.style.borderBottom = "2px solid #bd0000";
     recommendations.style.borderBottom = "none";
     news.style.borderBottom = "none";
     border__bottom = 3;
+};
+
+let reg_log__modal = document.getElementById('reg_login__modal'),
+    account__button = document.getElementById('account__button'),
+    menu__account = document.getElementById('menu__account'),
+    menu__cross = document.getElementById('menu__cross'),
+    reg_login__later = document.getElementById('reg_login__later');
+
+account__button.onclick = function () {
+    reg_log__modal.style.display = "block";
+};
+
+menu__account.onclick = function () {
+    reg_log__modal.style.display = "block";
+};
+
+menu__cross.onclick = function () {
+    navbar__menu.style.display = "none";
+};
+
+reg_login__later.onclick = function () {
+    reg_log__modal.style.display = "none";
 };
