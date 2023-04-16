@@ -7,27 +7,7 @@ change__language.onclick = function () {
     language__modal.style.display = "block";
 };
 
-window.onclick = function (e) {
-    if (e.target == language__modal) {
-        language__modal.style.display = "none";
-    } else if (e.target == teams__modal) {
-        teams__modal.style.display = "none";
-        isTeam__modal = false;
-    } else if (e.target == registration__modal) {
-        registration__modal.style.display = "none";
-        body.style.overflow = "auto";
-    } else if (e.target == login__modal) {
-        login__modal.style.display = "none";
-        body.style.overflow = "auto";
-    } else if (e.target == navbar__menu) {
-        navbar__menu.style.display = "none";
-        body.style.overflow = "auto";
-    } else if (e.target == reg_log__modal) {
-        reg_log__modal.style.display = "none";
-    } else if (e.target == category__modal) {
-        category__modal.style.display = "none";
-    }
-};
+
 
 
 let teams__modal = document.getElementById('teams__modal'),
@@ -136,34 +116,6 @@ burger.onclick = function () {
     body.style.overflow = "hidden";
 };
 
-
-let recommendations = document.getElementById('recommendations'),
-    news = document.getElementById('news'),
-    discussed = document.getElementById('discussed'),
-    border__bottom = 1;
-    recommendations.style.borderBottom = "2px solid #bd0000";
-
-recommendations.onclick = function () {
-    recommendations.style.borderBottom = "2px solid #bd0000";
-    news.style.borderBottom = "none";
-    discussed.style.borderBottom = "none";
-    border__bottom = 1;
-};
-
-news.onclick = function () {
-    news.style.borderBottom = "2px solid #bd0000";
-    recommendations.style.borderBottom = "none";
-    discussed.style.borderBottom = "none";
-    border__bottom = 2;
-};
-
-discussed.onclick = function () {
-    discussed.style.borderBottom = "2px solid #bd0000";
-    recommendations.style.borderBottom = "none";
-    news.style.borderBottom = "none";
-    border__bottom = 3;
-};
-
 let reg_log__modal = document.getElementById('reg_login__modal'),
     account__button = document.getElementById('account__button'),
     menu__account = document.getElementById('menu__account'),
@@ -185,6 +137,37 @@ menu__cross.onclick = function () {
 reg_login__later.onclick = function () {
     reg_log__modal.style.display = "none";
 };
+
+
+let category = document.getElementById('category'),
+    category__modal = document.getElementById('category__modal');
+
+category.onclick = function() {
+    category__modal.style.display = "block";
+};
+
+window.onclick = function (e) {
+    if (e.target == language__modal) {
+        language__modal.style.display = "none";
+    } else if (e.target == teams__modal) {
+        teams__modal.style.display = "none";
+        isTeam__modal = false;
+    } else if (e.target == registration__modal) {
+        registration__modal.style.display = "none";
+        body.style.overflow = "auto";
+    } else if (e.target == login__modal) {
+        login__modal.style.display = "none";
+        body.style.overflow = "auto";
+    } else if (e.target == navbar__menu) {
+        navbar__menu.style.display = "none";
+        body.style.overflow = "auto";
+    } else if (e.target == reg_log__modal) {
+        reg_log__modal.style.display = "none";
+    } else if (e.target == category__modal) {
+        category__modal.style.display = "none";
+    }
+};
+
 
 let scroll_up = document.getElementById('scroll_up');
 

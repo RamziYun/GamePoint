@@ -21,53 +21,70 @@ body {
     align-items: center;
     position: fixed;
     z-index: 10;
-    background-image: linear-gradient(to left top, orange, #fae102);
+    background-color: #bd0000;
 }
 
 .navbar__burger {
     display: none;
 }
 
-.navbar__logo_block {
-    display: flex;
-    width: 210px;
-    margin-left: -110px;
-    justify-content: space-between;
-    align-items: center;
+.menu__account {
+    display: none;
 }
 
 .navbar__logo {
     width: 56px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.navbar__logo_name {
-    display: flex;
-    width: 140px;
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: #000000;
+.menu__top {
+    display: none;
+}
+
+.navbar__logo_link {
+    display: none;
+}
+
+.navbar__logo_mobile {
+    display: none;
+}
+
+.menu__cross {
+    display: none;
+}
+
+.navbar__account {
+    width: 35px;
+    cursor: pointer;
+    margin-left: -190px;
 }
 
 .navbar__menu {
-    width: 680px;
+    width: 580px;
 }
 
 .menu__modal {
     display: flex;
+    align-items: center;
     width: 100%;
     justify-content: space-between;
 }
 
+.menu__cross:hover {
+    cursor: pointer;
+    background-color: rgba(15, 20, 25, 0.1);
+}
+
 .page_link {
     font-family: 'Roboto', sans-serif;
-    color: #000000;
+    text-decoration: none;
+    color: #ffffff;
     transition: 0.2s;
 }
 
 .page_link:hover {
-    color: #575555;
+    color: #c4c0c0;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -75,8 +92,10 @@ body {
 .language {
     display: flex;
     align-items: center;
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    color: #000000;
+    margin-right: 5px;
+    color: #ffffff;
 }
 
 .change_language {
@@ -114,13 +133,13 @@ body {
 
 .change_language__modal {
     position: absolute;
-    right: 58px;
+    right: 103px;
     top: 52px;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0px 0px 5px black;
     border: 1px solid black;
-    background-color: #ffffff;
+    background-color: black;
 }
 
 .language__option {
@@ -133,22 +152,24 @@ body {
 }
 
 .language__option:hover {
-    background-color: rgba(0, 0, 0, 0.06);
+    background-color: #00000F;
 }
 
 .flag {
-    width: 25px;
-    height: 15px;
+    width: 22px;
+    height: 13px;
 }
 
 .arrow_down {
-    width: 16px;
+    width: 24px;
+    height: 24px;
 }
 
 .news {
     display: flex;
-    background-image: url(../images/black_background.png);
+    background-image: url(https://phonoteka.org/uploads/posts/2022-01/thumbs/1643147621_2-phonoteka-org-p-chernii-fon-dlya-saita-2.png);
     justify-content: space-between;
+    height: 2165px;
 }
 
 /*                      НАВИГАЦИЯ ПО ИГРАМ                */
@@ -167,27 +188,27 @@ body {
     padding-left: 60px;
     flex-wrap: wrap;
     position: relative;
-    background-color: #ff4f00;
+    background-color: #bd0000;
 }
 
 .news__menu-games::after {
     display: block;
     content: '';
-    width: 30px;
+    width: 20px;
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
     transform: translateX(100%);
-    background: linear-gradient(to bottom right, #ff4f00 50%, transparent 52%);
+    background: linear-gradient(to bottom right, #bd0000 50%, transparent 52%);
 }
 
 .news__logo-games {
     font-family: 'Roboto', sans-serif;
-    color: #000000;
-    letter-spacing: 1.2px;
+    color: #ffffff;
     font-size: 16px;
-    font-weight: 700;
+    letter-spacing: 0.4px;
+    font-weight: 400;
     margin-left: 60px;
 }
 
@@ -195,7 +216,7 @@ body {
     height: 1px;
     width: 780px;
     margin-top: 3px;
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 .news__games {
@@ -209,10 +230,9 @@ body {
 .news__game {
     display: flex;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
     align-items: center;
     justify-content: space-between;
-    background-color: #ff4000;
     transition: 0.2s;
 }
 
@@ -229,8 +249,8 @@ body {
 
 .news__game-name {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: #000000;
+    font-weight: 400;
+    color: #ffffff;
     font-size: 15px;
     margin: auto 5px auto 5px;
 }
@@ -240,8 +260,8 @@ body {
 }
 
 .dota-2-icon {
-    width: 40px;
-    height: 35px;
+    width: 30px;
+    height: 25px;
 }
 
 .cs-go-icon {
@@ -249,16 +269,16 @@ body {
 }
 
 .pubg-icon {
-    width: 48px;
+    width: 45px;
 }
 
 .lol-icon {
-    width: 64px;
+    width: 60px;
 }
 
 .news__arrow_down {
     width: 18px;
-    margin: auto 8px auto -10px;
+    margin: auto 8px auto -5px;
 }
 
 /*                   НАВИГАЦИЯ ПО ТУРНИРАМ               */
@@ -269,9 +289,15 @@ body {
     width: 320px;
     margin: 85px 30px auto auto;
     border-radius: 4px;
+    border: 1px solid transparent;
     opacity: 0.9;
     box-shadow: 0px 0px 20px #000000;
-    background: #ffffff;
+    background: #000009;
+    transition: 0.2s;
+}
+
+.tournaments:hover {
+    border: 1px solid #bd0000;
 }
 
 .search {
@@ -317,7 +343,8 @@ body {
     font-weight: 700;
     font-style: normal;
     font-size: 20px;
-    color: #0F1419;
+    letter-spacing: 0.8px;
+    color: #ffffff;
 }
 
 .tournaments__lists {
@@ -335,7 +362,7 @@ body {
 }
 
 .tournament__post:hover {
-    background-color: rgba(0, 0, 0, 0.06);
+    background-color: #00000F;
     cursor: pointer;
 }
 
@@ -351,13 +378,13 @@ body {
     font-size: 15px;
     display: flex;
     align-items: center;
-    color: #0F1419;
+    color: #ffffff;
 }
 
 .tournament_time {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
-    color: #5B7083;
+    color: #5B708F;
 }
 
 .tournament__show_all {
@@ -372,7 +399,7 @@ body {
 }
 
 .tournament__show_all:hover {
-    background-color: rgba(0, 0, 0, 0.06);
+    background-color: #00000F;
     cursor: pointer;
 }
 
@@ -385,7 +412,7 @@ body {
     opacity: 0.9;
     border-radius: 4px;
     box-shadow: 0px 0px 20px #000000;
-    background-color: #ffffff;
+    background-color: #000009;
 }
 
 .posts__navbar {
@@ -400,10 +427,11 @@ body {
     font-size: 15px;
     padding: 12px 12px;
     transition: 0.2;
+    color: #FFFFFF;
 }
 
 .posts__navigation:hover {
-    color: #575555;
+    color: #c4c0c0;
     cursor: pointer;
 }
 
@@ -411,20 +439,22 @@ body {
     height: 1px;
     width: 800px;
     margin: 0px auto;
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 .post {
     width: 800px;
     margin: 15px auto auto 35px;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, .2);
+    border: 1px solid transparent;
     border-radius: 4px;
     transition: 0.2s;
-    background-color: #f7f6f2;
+    background-color: #00000f;
 }
 
 .post:hover {
     cursor: pointer;
+    border: 1px solid #bd0000;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
 }
 
@@ -442,9 +472,10 @@ body {
 .post__name {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 400;
     margin: auto auto 10px 5px;
     width: 700px;
+    color: #FFFFFF;
 }
 
 .post__info {
@@ -483,24 +514,79 @@ body {
 
 .teams__lists {
     position: absolute;
-    right: 336px;
+    right: 466px;
     top: 52px;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0px 0px 5px black;
     border: 1px solid black;
-    background-color: #ffffff;
+    background-color: black;
 }
 
 .team__option {
     padding: 8px 16px;
     font-family: 'Roboto', sans-serif;
-    color: #000000;
+    color: #ffffff;
     transition: 0.2s;
 }
 
 .team__option:hover {
-    background-color: rgba(0, 0, 0, 0.06);
+    background-color: #00000F;
+}
+
+/*                       ФУТЕР                                  */
+
+.footer {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: -10px 0px 15px #000;
+    background-color: #000;
+}
+
+.footer__left {
+    display: flex;
+    width: 300px;
+    height: 60px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: rgb(83, 100, 113);
+    transition: 0.2s;
+}
+
+.footer__link {
+    width: 40px;
+}
+
+.footer__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #5B708F;
+}
+
+.footer__right {
+    display: flex;
+    width: 250px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__icon {
+    font-size: 2em;
+    color: #536471;
+}
+
+.footer__icon:hover {
+    cursor: pointer;
+    color: #5B708F;
 }
 
 /*                        РЕГИСТРАЦИЯ                              */
@@ -525,7 +611,7 @@ body {
     width: 550px;
     height: 500px;
     box-shadow: #000 0 30px 60px;
-    background-color: #fff;
+    background-color: #000009;
 }
 
 .cross {
@@ -533,11 +619,12 @@ body {
     padding: 10px;
     border-radius: 9999px;
     transition: 0.2s;
+    fill: #FFFFFF;
 }
 
 .cross:hover {
     cursor: pointer;
-    background-color: rgba(15, 20, 25, 0.1);
+    background-color: #000029;
 }
 
 .reg__name {
@@ -550,14 +637,14 @@ body {
     font-size: 40px;
     line-height: 47px;
     margin: 15px 30px 10px 25px;
-    color: #000;
+    color: #FFFFFF;
 }
 
 .input {
     width: 480px;
     height: 50px;
-    background-color: #ffffec;
-    border: 1px solid #ececff;
+    background-color: #00000F;
+    border: 1px solid #000009;
     border-radius: 5px;
     box-shadow: -1px 0 8px -5px #000;
     font-family: 'Roboto', sans-serif;
@@ -572,8 +659,8 @@ body {
 
 .input:hover {
     cursor: pointer;
-    background-color: #fff;
-    border: 1px solid #ff4f00;
+    background-color: #000029;
+    border: 1px solid #000009;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
@@ -581,14 +668,16 @@ body {
     margin-left: 30px;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
+    color: #FFFFFF;
 }
 
 .reg__change_info {
-    width: 160px;
+    width: 150px;
     margin-left: 30px;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     transition: 0.1s;
+    color: #FFFFFF;
 }
 
 .reg__change_info:hover {
@@ -599,11 +688,11 @@ body {
 
 .birth__logo {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     margin: 20px 30px 5px;
-    color: #000;
+    color: #FFFFFF;
 }
 
 .birth__block {
@@ -622,23 +711,26 @@ body {
     font-weight: 400;
     margin-top: 5px;
     border-radius: 5px;
-    background-color: #ffffec;
+    color: #FFFFFF;
+    background-color: #00000F;
     box-shadow: -1px 0 8px -5px #000;
-    border: 1px solid #ff4f00;
+    border: 1px solid #000009;
+    transition: 0.2s;
 }
 
 .birth__select:hover {
     cursor: pointer;
-    background-color: #ffffec;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    background-color: #000029;
 }
 
 .birth__text {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 22px;
-    color: #000;
+    color: #FFFFFF;
     opacity: 0.6;
     margin: 0px 0px 30px 30px;
 }
@@ -647,16 +739,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #FFFFFF;
 }
 
 .reg__ready_button {
     width: 180px;
     height: 40px;
     margin-right: 25px;
-    background: #ff4f00;
+    background: #bd0000;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     border: none;
@@ -666,7 +758,7 @@ body {
 
 .reg__ready_button:hover {
     cursor: pointer;
-    background: #ff4000;
+    background: #bd000F;
 }
 
 .login__modal {
@@ -688,7 +780,7 @@ body {
     width: 550px;
     height: 340px;
     box-shadow: #000 0 30px 60px;
-    background-color: #fff;
+    background-color: #000009;
 }
 
 .login__bottom {
@@ -696,6 +788,208 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 25px;
+}
+
+.reg_login__modal {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    z-index: 1000;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+.reg_login__lists {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 82px;
+    top: 62px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+    border: 1px solid black;
+    background-color: black;
+}
+
+/*                        СТРАНИЦА НОВОСТЕЙ                          */
+
+.news__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    background-image: url(https://phonoteka.org/uploads/posts/2022-01/thumbs/1643147621_2-phonoteka-org-p-chernii-fon-dlya-saita-2.png);
+}
+
+.news__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1260px;
+}
+
+.news__logo_name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.category__block {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.category__name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.news__news {
+    display: flex;
+    height: 1250px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.news__post {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    width: 600px;
+    height: 380px;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    transition: 0.2s;
+    background-color: #00000f;
+}
+
+.news__post:hover {
+    margin-top: -5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px #000000;
+}
+
+.news__left {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.news__right {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news__name {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+.news__img {
+    width: 550px;
+}
+
+.news__description {
+    width: 550px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.news__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news__spectators {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35px;
+}
+
+.news__pages {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-color: #00000f;
+    box-shadow: 0px 0px 10px #000000;
+}
+
+.news__pages_list {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.news__page {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.news__page:hover {
+    color: #c4c0c0;
+    text-decoration: underline;
+}
+
+.page__number {
+    font-size: 15px;
+}
+
+.page__number:first-child {
+    color: rgb(189, 0, 0)
+}
+
+.category__modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.category__lists {
+    position: absolute;
+    right: 50px;
+    top: 130px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+    border: 1px solid black;
+    background-color: black;
+}
+
+.scroll_up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 11px;
+    border-radius: 9999px;
+    text-decoration: none;
+    background-color: #000000;
 }
 
 /*                        МЕДИА ЗАПРОСЫ                        */
@@ -706,11 +1000,23 @@ body {
     }
 
     .navbar__logo {
-        width: 25px;
+        display: none;
     }
 
-    .navbar__logo_name {
-        font-size: 15px;
+    .navbar__logo_link {
+        display: block;
+    }
+
+    .navbar__logo_mobile {
+        display: block;
+        width: 25px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .navbar__account {
+        width: 20px;
+        margin-left: -60px;
     }
 
     .navbar__menu {
@@ -726,19 +1032,40 @@ body {
 
     .menu__modal {
         display: flex;
-        flex-direction: column;
         position: absolute;
+        flex-direction: column;
+        justify-content: flex-start;
         width: 50%;
-        height: 200px;
-        background-color: #fff;
+        height: 100%;
+        background-color: black;
         top: 0%;
         left: 0%;
         border-bottom-right-radius: 5px;
         box-shadow: 0px 0px 5px #000;
     }
 
+    .menu__top {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        width: 100%;
+        height: 24px;
+    }
+
+    .menu__account {
+        display: block;
+    }
+
+    .menu__cross {
+        display: block;
+        width: 20px;
+        height: 20px;
+        fill: #ffffff;
+        transition: 0.2s;
+    }
+
     .page_link {
-        padding: 10px 20px;
+        padding: 15px 20px;
         transition: 0.2s;
     }
 
@@ -748,58 +1075,53 @@ body {
 
     .teams__lists {
         right: 80px;
-        top: 100px;
-    }
-
-    .navbar__logo_block {
-        width: 170px;
-        margin-left: 0px;
+        top: 125px;
     }
 
     .header__burger {
         display: block;
         position: relative;
-        width: 25px;
-        height: 20px;
+        width: 23px;
+        height: 16px;
         cursor: pointer;
     }
 
     .header__burger::after {
         content: "";
-        background-color: #ff4f00;
-        box-shadow: 0px 0px 4px #000;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 2px #000;
         position: absolute;
         width: 100%;
-        height: 3px;
-        margin: 0px 7px 0px 5px;
+        height: 2px;
+        margin: 0px 5px;
         left: 0;
         bottom: 0;
-        border-radius: 50px;
+        border-radius: 3px;
     }
 
     .header__burger::before {
         content: "";
-        background-color: #ff4f00;
-        box-shadow: 0px 0px 4px #000;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 2px #000;
         position: absolute;
         width: 100%;
-        height: 3px;
-        margin: 0px 7px 4px 5px;
+        height: 2px;
+        margin: 0px 5px;
         left: 0;
         top: 0;
-        border-radius: 50px;
+        border-radius: 3px;
     }
 
     .header__burger span {
-        background-color: #ff4f00;
-        box-shadow: 0px 0px 4px #000;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 2px #000;
         position: absolute;
         width: 100%;
-        height: 3px;
-        margin: 0px 7px 4px 5px;
+        height: 2px;
+        margin: 0px 5px;
         left: 0;
-        top: 9px;
-        border-radius: 50px;
+        top: 7px;
+        border-radius: 3px;
     }
 
     .change_language {
@@ -808,8 +1130,12 @@ body {
     }
 
     .change_language__modal {
-        right: 18px;
+        right: 37px;
         top: 30px;
+    }
+
+    .language {
+        font-size: 12px;
     }
 
     .language__option {
@@ -821,20 +1147,23 @@ body {
         height: 12px;
     }
 
+    .news {
+        height: 950px;
+    }
+
     .news__menu_news {
         align-items: flex-start;
     }
 
     .news__menu-games {
-        width: 85%;
-        height: 50px;
-        margin: 45px 0px 0px;
+        width: 60%;
+        height: 32px;
+        margin: 40px 0px 0px;
         padding-left: 10px;
     }
 
     .news__logo-games {
-        font-size: 12px;
-        letter-spacing: 1px;
+        display: none;
     }
 
     .news__span-games {
@@ -842,12 +1171,13 @@ body {
     }
 
     .news__games {
-        width: 300px;
-        margin: 3px 30px;
+        width: 180px;
+        margin: 6px 0px 0px 5px;
+        height: 0px;
     }
 
     .news__game {
-        height: 30px;
+        height: 22px;
         padding: 0px 5px;
     }
 
@@ -860,20 +1190,20 @@ body {
     }
 
     .dota-2-icon {
-        width: 20px;
-        height: 18px;
+        width: 15px;
+        height: 12px;
     }
 
     .cs-go-icon {
-        width: 35px;
+        width: 30px;
     }
 
     .pubg-icon {
-        width: 25px;
+        width: 23px;
     }
 
     .lol-icon {
-        width: 35px;
+        width: 32px;
     }
 
     .news__arrow_down {
@@ -881,25 +1211,56 @@ body {
     }
 
     .tournaments {
+        width: 120px;
+        height: 22px;
+        position: absolute;
+        top: -45px;
+        right: -20px;
+    }
+
+    .searchImg {
+        width: 12px;
+    }
+
+    .searchInput {
+        font-size: 11px;
+        margin-left: 4px;
+        width: 70px;
+    }
+
+    .news__span-tournaments {
+        display: none;
+    }
+
+    .tournaments__logo {
+        display: none;
+    }
+
+    .tournaments__lists {
+        display: none;
+    }
+
+    .tournament__show_all {
         display: none;
     }
 
     .news__posts {
-        width: 94%;
-        margin: 10px;
+        width: 270px;
+        margin: 10px 0px auto 50px;
     }
 
     .posts__navbar {
-        margin-left: 30px;
+        margin-left: 20px;
+        width: 80%;
     }
 
     .posts__navigation {
-        font-size: 13px;
-        padding: 8px 10px;
+        font-size: 10px;
+        padding: 5px;
     }
 
     .news__span-news {
-        width: 320px;
+        width: 250px;
     }
 
     .post {
@@ -908,9 +1269,9 @@ body {
     }
 
     .post__name {
-        font-size: 13px;
+        font-size: 11px;
+        margin: 0px auto 5px 0px;
         width: 95%;
-        margin: 5px 0px;
         font-weight: 400;
     }
 
@@ -947,6 +1308,13 @@ body {
         width: 90%;
         font-size: 25px;
         margin: 5px 0px 15px 25px;
+    }
+
+    .cross {
+        width: 15px;
+        padding: 5px;
+        border-radius: 9999px;
+        transition: 0.2s;
     }
 
     .input {
@@ -986,5 +1354,113 @@ body {
     .login__content {
         width: 80%;
         height: 275px;
+    }
+
+    .reg_login__modal {
+        background-color: rgba(0, 0, 0, 0.55);
+    }
+
+    .reg_login__lists {
+        top: 1%;
+        left: 30%;
+    }
+
+    .reg_login__cross {
+        display: block;
+    }
+
+    .footer {
+        height: 60px;
+        justify-content: space-evenly;
+    }
+
+    .footer__left {
+        width: 205px;
+        height: 35px;
+    }
+
+    .footer__text {
+        font-size: 8px;
+    }
+
+    .footer__right {
+        width: 100px;
+    }
+
+    .footer__icon {
+        font-size: 1em;
+    }
+
+    .news__block {
+        padding-top: 35px;
+    }
+
+    .news__header {
+        width: 90%;
+    }
+
+    .news__logo_name {
+        font-size: 15px;
+        font-weight: 400;
+        width: 60%;
+    }
+
+    .category__block {
+        width: 28%;
+    }
+
+    .category__name {
+        font-size: 13px;
+    }
+
+    .news__post {
+        width: 90%;
+        height: 270px;
+        padding: 5px 0px;
+    }
+
+    .new__post:hover {
+        margin-top: 0px;
+    }
+
+    .news__right {
+        width: 90%;
+    }
+
+    .news__name {
+        font-size: 13px;
+    }
+
+    .news__img {
+        width: 100%;
+    }
+
+    .news__description {
+        width: 100%;
+        font-size: 11px;
+    }
+
+    .news__info {
+        width: 100%;
+    }
+
+    .news__spectators {
+        width: 32px;
+    }
+
+    .news__news {
+        height: 1750px;
+    }
+
+    .category__lists {
+        top: 90px;
+        right: 8px;
+    }
+
+    .scroll_up {
+        right: 10px;
+        bottom: 10px;
+        padding: 8px 9px;
+        font-size: 0.7em;
     }
 }
