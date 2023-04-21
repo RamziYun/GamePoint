@@ -235,7 +235,7 @@ body {
 
 .main__name_block {
     display: flex;
-    width: 40%;
+    width: 42%;
     height: 30%;
     flex-direction: column;
     justify-content: space-between;
