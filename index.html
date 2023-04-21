@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="eet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon"
         href="https://img.freepik.com/premium-vector/letter-m-esport-logo-triangle-esport-logo-design-template-badge-esport-logo-illustration-vector_15602-1783.jpg?w=2000"
@@ -17,71 +17,218 @@
 
 <body>
     <div class="navbar">
-        <div id="burger" class="header__burger">
-            <span></span>
-        </div>
-        <img src="images/user.png" alt="" id="account__button" class="navbar__account">
-        <a href="/index.html" class="navbar__logo_link">
-            <img src="https://img.freepik.com/premium-vector/letter-m-esport-logo-triangle-esport-logo-design-template-badge-esport-logo-illustration-vector_15602-1783.jpg?w=2000" alt="" class="navbar__logo_mobile">
-        </a>
-        <div id="navbar__menu" class="navbar__menu">
-            <div class="menu__modal">
-                <div class="menu__top">
-                    <img src="images/user.png" alt="" id="menu__account" class="menu__account">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" id="menu__cross" class="menu__cross">
-                        <g>
-                            <path
-                                d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z">
-                            </path>
-                        </g>
-                    </svg>
-                </div>
-                <a href="/news.html" class="page_link">Новости</a>
-                <a class="page_link">Турниры</a>
-                <a href="/index.html"><img
-                        src="https://img.freepik.com/premium-vector/letter-m-esport-logo-triangle-esport-logo-design-template-badge-esport-logo-illustration-vector_15602-1783.jpg?w=2000"
-                        alt="" class="navbar__logo"></a>
-                <a id="teams__button" class="page_link">Команды</a>
-                <a class="navbar__about_us page_link">О нас</a>
+        <div class="navbar__container">
+            <div id="burger" class="header__burger">
+                <span></span>
             </div>
+            <i class="fa-regular fa-user navbar__account" id="account__button"></i>
+            <a href="/index.html" class="navbar__logo_link">
+                <img src="https://img.freepik.com/premium-vector/letter-m-esport-logo-triangle-esport-logo-design-template-badge-esport-logo-illustration-vector_15602-1783.jpg?w=2000"
+                    alt="" class="navbar__logo_mobile">
+            </a>
+            <div id="navbar__menu" class="navbar__menu">
+                <div class="menu__modal">
+                    <div class="menu__top">
+                        <i class="fa-regular fa-user menu__account" id="menu__account"></i>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" id="menu__cross" class="menu__cross">
+                            <g>
+                                <path
+                                    d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <a href="/news.html" class="page_link">Новости</a>
+                    <a class="page_link">Турниры</a>
+                    <a href="/index.html"><img
+                            src="https://img.freepik.com/premium-vector/letter-m-esport-logo-triangle-esport-logo-design-template-badge-esport-logo-illustration-vector_15602-1783.jpg?w=2000"
+                            alt="" class="navbar__logo"></a>
+                    <a id="teams__button" class="page_link">Команды</a>
+                    <a class="navbar__about_us page_link">О нас</a>
+                </div>
+            </div>
+            <button id="change__language" class="change_language">
+                <div class="language">Ру</div>
+                <img class="flag"
+                    src="https://wiki.lingvoforum.net/wiki/images/9/98/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8.png"
+                    alt="">
+                <img src="https://www.citypng.com/public/uploads/small/11639648464ffljijv4ewdrov58ejrjvfms13ycmrcvrnnn7vite5u0kz8jspbxwwtonkrhzeqhetnxijmxrjgdfg8uuybmte2lk1lwbr08ybkv.png"
+                    alt="" class="arrow_down">
+            </button>
         </div>
-        <button id="change__language" class="change_language">
-            <div class="language">Ру</div>
-            <img class="flag"
-                src="https://wiki.lingvoforum.net/wiki/images/9/98/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8.png"
-                alt="">
-            <img src="https://www.citypng.com/public/uploads/small/11639648464ffljijv4ewdrov58ejrjvfms13ycmrcvrnnn7vite5u0kz8jspbxwwtonkrhzeqhetnxijmxrjgdfg8uuybmte2lk1lwbr08ybkv.png"
-                alt="" class="arrow_down">
-        </button>
     </div>
-    <div class="news">
-        <div class="news__menu_news">
-            <div class="news__menu-games">
-                <div class="news__logo-games">Выбери свою игру!</div>
-                <div class="news__span-games"></div>
-                <div class="news__games">
-                    <div class="news__game">
-                        <img src="images/dota.png" class="news__game-icon dota-2-icon"></img>
-                        <div class="news__game-name dota-2">Dota 2</div>
+    <div class="main__page">
+        <div class="main__container">
+            <div class="main__block">
+                <div class="main__img_block">
+                    <img src="https://www.freepnglogos.com/uploads/call-of-duty-png/call-of-duty-black-center-soldier-image-29.png"
+                        alt="cod">
+                    <div class="main__name_block">
+                        <div class="main__name_text">
+                            <div class="main__name">Принимай участие в турнирах с призовым фондом</div>
+                            <div class="main__description">Регистрируйся, играй и побеждай только у нас!</div>
+                        </div>
+                        <button class="main__button">Принять участие</button>
                     </div>
-                    <div class="news__game">
-                        <img src="images/cs-go.png" class="news__game-icon cs-go-icon"></img>
-                        <div class="news__game-name cs-go">CS GO</div>
+                    <span>План по преобретению успехов в сфере киберспортa!</span>
+                    <img src="https://www.freepnglogos.com/uploads/call-of-duty-png/game-characters-call-of-duty-transparent-pictures-icons-5.png"
+                        alt="cod">
+                </div>
+                <div class="main__plan">
+                    <div class="main__step">
+                        <div class="step__img">
+                            <i class="fa-solid fa-address-card fa-2xl" style="color: #536471;"></i>
+                            <i class="fa-solid fa-1 fa-2xl" style="color: #536471;"></i>
+                        </div>
+                        <div class="step__text">
+                            <div class="step__name">Регистрируйся</div>
+                            <div class="step__description">Создай аккаунт и привяжи свой игровой профиль за пару минут
+                            </div>
+                        </div>
+                        <div class="step_next__block">
+                            <i class="fa-solid fa-arrow-right-long fa-2xl step_next-img" style="color: #536471;"></i>
+                        </div>
                     </div>
-                    <div class="news__game">
-                        <img src="images/pubg.png" class="news__game-icon pubg-icon"></img>
-                        <div class="news__game-name pubg">Pubg</div>
+                    <div class="main__step">
+                        <div class="step__img">
+                            <i class="fa-solid fa-users fa-2xl" style="color: #536471;"></i>
+                            <i class="fa-solid fa-2 fa-2xl" style="color: #536471;"></i>
+                        </div>
+                        <div class="step__text">
+                            <div class="step__name">Создавай команду</div>
+                            <div class="step__description">Создай команду и приглашай друзей или вступай в команду
+                                других пользователей</div>
+                        </div>
+                        <div class="step_next__block">
+                            <i class="fa-solid fa-arrow-right-long fa-2xl step_next-img" style="color: #536471;"></i>
+                        </div>
                     </div>
-                    <div class="news__game">
-                        <img src="images/lol.png" class="news__game-icon lol-icon"></img>
-                        <div class="news__game-name pubg">League of Legends</div>
-                    </div>
-                    <div class="news__game">
-                        <div class="news__game-name pubg" style="margin: auto 10px auto 10px;">Еще</div>
-                        <img src="https://parspng.com/wp-content/uploads/2021/11/arrowpng.parspng.com-13.png" alt=""
-                            class="news__arrow_down">
+                    <div class="main__step">
+                        <div class="step__img">
+                            <i class="fa-sharp fa-solid fa-coins fa-2xl" style="color: #536471;"></i>
+                            <i class="fa-solid fa-3 fa-2xl" style="color: #536471;"></i>
+                        </div>
+                        <div class="step__text">
+                            <div class="step__name">Побеждай</div>
+                            <div class="step__description">Мы проводим регулярные турниры с денежными призами</div>
+                        </div>
+                        <div class="step_next__block">
+                            <i class="fa-solid fa-arrow-right-long fa-2xl step_next-img" style="color: #536471;"></i>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="tournament__logo">
+                <div>Турниры</div>
+                <a href="">Посмотреть все турниры...</a>
+            </div>
+            <div class="main__tournaments">
+                <div class="main__tournament">
+                    <div class="main__tournaments_top">
+                        <div class="main__tournaments_name">BIGBATTLE #1: PUBG mobile</div>
+                        <img src="https://bigplay.gg/uploads/storage/adminimg/turnir_logo/rJTczh3nqj1YAGpI73shQNrV09NSZ0.webp"
+                            alt="">
+                    </div>
+                    <div class="main__tournaments_description">
+                        <div class="main__tournaments_calendar_block">
+                            <i class="fa-regular fa-calendar fa-xs" style="color: #ffffff;"></i>
+                            <div>21.04.2023</div>
+                        </div>
+                        <div class="main__tournaments_reward_block">
+                            <i class="fa-solid fa-coins fa-xs" style="color: #ffffff;"></i>
+                            <div>200$</div>
+                        </div>
+                    </div>
+                    <div class="main__tournaments_text">Регистрация до 20.04.2023</div>
+                    <div class="main__tournaments_text">Формат: squad</div>
+                    <button class="main__tournaments_button">Подать заявку</button>
+                </div>
+                <div class="main__tournament">
+                    <div class="main__tournaments_top">
+                        <div class="main__tournaments_name">BIGBATTLE #1: PUBG mobile</div>
+                        <img src="https://bigplay.gg/uploads/storage/adminimg/turnir_logo/rJTczh3nqj1YAGpI73shQNrV09NSZ0.webp"
+                            alt="">
+                    </div>
+                    <div class="main__tournaments_description">
+                        <div class="main__tournaments_calendar_block">
+                            <i class="fa-regular fa-calendar fa-xs" style="color: #ffffff;"></i>
+                            <div>21.04.2023</div>
+                        </div>
+                        <div class="main__tournaments_reward_block">
+                            <i class="fa-solid fa-coins fa-xs" style="color: #ffffff;"></i>
+                            <div>200$</div>
+                        </div>
+                    </div>
+                    <div class="main__tournaments_text">Регистрация до 20.04.2023</div>
+                    <div class="main__tournaments_text">Формат: squad</div>
+                    <button class="main__tournaments_button">Подать заявку</button>
+                </div>
+                <div class="main__tournament">
+                    <div class="main__tournaments_top">
+                        <div class="main__tournaments_name">BIGBATTLE #1: PUBG mobile</div>
+                        <img src="https://bigplay.gg/uploads/storage/adminimg/turnir_logo/rJTczh3nqj1YAGpI73shQNrV09NSZ0.webp"
+                            alt="">
+                    </div>
+                    <div class="main__tournaments_description">
+                        <div class="main__tournaments_calendar_block">
+                            <i class="fa-regular fa-calendar fa-xs" style="color: #ffffff;"></i>
+                            <div>21.04.2023</div>
+                        </div>
+                        <div class="main__tournaments_reward_block">
+                            <i class="fa-solid fa-coins fa-xs" style="color: #ffffff;"></i>
+                            <div>200$</div>
+                        </div>
+                    </div>
+                    <div class="main__tournaments_text">Регистрация до 20.04.2023</div>
+                    <div class="main__tournaments_text">Формат: squad</div>
+                    <button class="main__tournaments_button">Подать заявку</button>
+                </div>
+            </div>
+            <div class="new-news__logo">Самые свежие новости из мира киберспорта</div>
+            <div class="all">
+                <input checked type="radio" name="respond" id="desktop">
+                <article id="slider">
+                    <input checked type="radio" name="slider" id="switch1">
+                    <input type="radio" name="slider" id="switch2">
+                    <input type="radio" name="slider" id="switch3">
+                    <input type="radio" name="slider" id="switch4">
+                    <input type="radio" name="slider" id="switch5">
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="image">
+                                <article><img
+                                        src="https://images.pinger.kz/fit?url=https%3A%2F%2Fpinger.kz%2Fstorage%2Fb8d3813cbab5e4e8687fc10f0c5416dcadcc1afa97b24a4693dee5e1c986893ea9e78ec1b6f9148e.jpg&amp;width=840&amp;height=472&amp;type=auto&amp;quality=95">
+                                </article>
+                                <article><img
+                                        src="https://lh5.googleusercontent.com/Wlu1jfHBaAKWYqGdubt99rGu5e5oyoKWxHiEUpcCLUS7gSEnVGxeMCDpz8PDcvCxL_A-1JyLazUWccPGSlfb-WgXlqf98eh5p7y0V37W4sIUb2BHDc-Aol104kJKf15_Jt5hS0IQ">
+                                </article>
+                                <article><img
+                                        src="https://logincasino.com/uploads/gallery/34867/thumbs/o750_400_optim_m_465e8363db4cdd3bc3086d63a18e9d8b.jpg">
+                                </article>
+                                <article><img
+                                        src="https://images.pinger.kz/fit?url=https%3A%2F%2Fpinger.kz%2Fstorage%2F868c24f2fd737e5f2f1bf09ace448a6077d6ab4ca2d283910b24a9a2f3fc74cc4323b66be8cf8933.jpg&amp;width=840&amp;height=472&amp;type=auto&amp;quality=95">
+                                </article>
+                                <article><img
+                                        src="https://virtus-img.cdnvideo.ru/images/as-is/plain/01/01c99615260cc17f12dcb6e4359e87c3.jpg@jpg">
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="controls">
+                        <label for="switch1"></label>
+                        <label for="switch2"></label>
+                        <label for="switch3"></label>
+                        <label for="switch4"></label>
+                        <label for="switch5"></label>
+                    </div>
+                    <div id="active">
+                        <label for="switch1"></label>
+                        <label for="switch2"></label>
+                        <label for="switch3"></label>
+                        <label for="switch4"></label>
+                        <label for="switch5"></label>
+                    </div>
+                </article>
             </div>
             <div class="news__posts">
                 <div class="posts__navbar">
@@ -122,111 +269,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="post">
-                    <div class="post__separation">
-                        <img src="images/dota.png" class="news__game-icon dota-2-icon"
-                            style="margin: 5px 10px auto 10px;"></img>
-                        <div class="post__main">
-                            <div class="post__name">Игрок DPC сдался сразу после смерти и типнул тиммейта — комментаторы
-                                не смогли сдержать смех</div>
-                            <img class="dota__img"
-                                src="https://virtus-img.cdnvideo.ru/images/material-card/plain/78/7887b3b1-26ce-4a8b-a7a2-ffd8a9267fac.png"
-                                alt="">
-                            <div class="post__info">
-                                <span class="post__time">30.03 в 12:21</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="post__separation">
-                        <img src="images/dota.png" class="news__game-icon dota-2-icon"
-                            style="margin: 5px 10px auto 10px;"></img>
-                        <div class="post__main">
-                            <div class="post__name">Игрок DPC сдался сразу после смерти и типнул тиммейта — комментаторы
-                                не смогли сдержать смех</div>
-                            <img class="dota__img"
-                                src="https://virtus-img.cdnvideo.ru/images/material-card/plain/78/7887b3b1-26ce-4a8b-a7a2-ffd8a9267fac.png"
-                                alt="">
-                            <div class="post__info">
-                                <span class="post__time">30.03 в 12:21</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tournaments">
-            <div class="search">
-                <svg viewBox="0 0 24 24" aria-hidden="true" class="searchImg">
-                    <g>
-                        <path
-                            d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z">
-                        </path>
-                    </g>
-                </svg>
-                <input placeholder="Искать матч" type="text" class="searchInput" />
-            </div>
-            <div class="news__span-tournaments"></div>
-            <div class="tournaments__logo">Турниры</div>
-            <div class="tournaments__lists">
-                <div class="tournament__post">
-                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
-                    <div class="tournament_description">
-                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
-                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
-                    </div>
-                </div>
-                <div class="news__span-tournaments"></div>
-                <div class="tournament__post">
-                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
-                    <div class="tournament_description">
-                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
-                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
-                    </div>
-                </div>
-                <div class="news__span-tournaments"></div>
-                <div class="tournament__post">
-                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
-                    <div class="tournament_description">
-                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
-                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
-                    </div>
-                </div>
-                <div class="news__span-tournaments"></div>
-                <div class="tournament__post">
-                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
-                    <div class="tournament_description">
-                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
-                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
-                    </div>
-                </div>
-                <div class="news__span-tournaments"></div>
-                <div class="tournament__post">
-                    <img src="images/dota.png" alt="" class="news__game-icon dota-2-icon">
-                    <div class="tournament_description">
-                        <div class="tournament_name">Pinnacle Cup: Malta Vibes #1</div>
-                        <div class="tournament_time">29.03.2023 - 08.04.2023</div>
-                    </div>
-                </div>
-                <div class="news__span-tournaments"></div>
-            </div>
-            <div class="tournament__show_all">
-                <a class="page_link">Все турниры</a>
             </div>
         </div>
     </div>
     <div class="footer">
-        <div class="footer__left">
-            <div class="footer__text">Номер: +998 90 999 99 99</div>
-            <div class="footer__text">Эл.почта: gamepoint@gmail.com</div>
-            <a class="footer__text footer__link">О нас</a>
-        </div>
-        <div class="footer__right">
-            <i class="fa-brands fa-instagram footer__icon"></i>
-            <i class="fa-brands fa-facebook footer__icon"></i>
-            <i class="fa-brands fa-telegram footer__icon"></i>
-            <i class="fa-brands fa-discord footer__icon"></i>
+        <div class="footer__container">
+            <div class="footer__left">
+                <div class="footer__text">Номер: +998 90 999 99 99</div>
+                <div class="footer__text">Эл.почта: gamepoint@gmail.com</div>
+                <a class="footer__text footer__link">О нас</a>
+            </div>
+            <div class="footer__right">
+                <i class="fa-brands fa-instagram footer__icon"></i>
+                <i class="fa-brands fa-facebook footer__icon"></i>
+                <i class="fa-brands fa-telegram footer__icon"></i>
+                <i class="fa-brands fa-discord footer__icon"></i>
+            </div>
         </div>
     </div>
     <div id="change_language__modal" class="language__modal">

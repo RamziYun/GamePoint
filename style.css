@@ -1,27 +1,30 @@
-@font-face {
-    font-family: "Lato";
-    src: url();
-}
-
 body {
     margin: 0px auto;
     width: 100%;
     position: relative;
     max-height: 100vh;
     overflow: auto;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://phonoteka.org/uploads/posts/2022-01/thumbs/1643147621_2-phonoteka-org-p-chernii-fon-dlya-saita-2.png);
 }
 
 /*              НАВБАР                          */
 
 .navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background-color: #bd0000;
+}
+
+.navbar__container {
     display: flex;
     width: 100%;
+    max-width: 1400px;
+    margin: 0px auto;
     height: 65px;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
-    z-index: 10;
-    background-color: #bd0000;
 }
 
 .navbar__burger {
@@ -30,6 +33,7 @@ body {
 
 .menu__account {
     display: none;
+    color: #ffffff;
 }
 
 .navbar__logo {
@@ -55,9 +59,10 @@ body {
 }
 
 .navbar__account {
-    width: 35px;
+    font-size: 25px;
     cursor: pointer;
     margin-left: -190px;
+    color: #ffffff;
 }
 
 .navbar__menu {
@@ -77,7 +82,6 @@ body {
 }
 
 .page_link {
-    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: #ffffff;
     transition: 0.2s;
@@ -93,7 +97,6 @@ body {
     display: flex;
     align-items: center;
     font-size: 15px;
-    font-family: 'Roboto', sans-serif;
     margin-right: 5px;
     color: #ffffff;
 }
@@ -165,26 +168,183 @@ body {
     height: 24px;
 }
 
-.news {
-    display: flex;
+
+/*                        ГЛАВНАЯ СТРАНИЦА                               */
+
+
+.main__page {
+    width: 100%;
+    padding-top: 85px;
     background-image: url(https://phonoteka.org/uploads/posts/2022-01/thumbs/1643147621_2-phonoteka-org-p-chernii-fon-dlya-saita-2.png);
+}
+
+.main__container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0px auto;
+    flex-direction: column;
     justify-content: space-between;
-    height: 2165px;
+    align-items: center;
+}
+
+.main__block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+}
+
+.main__block span {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 95%;
+    border-radius: 9999px;
+    bottom: 210px;
+    z-index: 100;
+    font-size: 22px;
+    color: #FFFFFF;
+    background-color: #00000F;
+}
+
+.main__img_block {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    position: relative;
+    justify-content: center;
+}
+
+.main__img_block img:first-child {
+    width: 340px;
+    height: 450px;
+    position: absolute;
+    left: 80px;
+    top: -40px;
+}
+
+.main__img_block img:last-child {
+    width: 309px;
+    height: 375px;
+    position: absolute;
+    right: 115px;
+    top: 12px;
+}
+
+.main__name_block {
+    display: flex;
+    width: 40%;
+    height: 30%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.main__name_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65%;
+}
+
+.main__name {
+    display: flex;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.main__description {
+    font-size: 18px;
+    color: #536471;
+}
+
+.main__button {
+    width: 30%;
+    height: 20%;
+    border: none;
+    border-radius: 9999px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #bd0000;
+    transition: 0.2s;
+}
+
+.main__button:hover {
+    cursor: pointer;
+    background: #bd000F;
+}
+
+.main__plan {
+    display: flex;
+    width: 100%;
+    height: 25%;
+    margin-top: -170px;
+    justify-content: space-evenly;
+}
+
+.main__step {
+    display: flex;
+    width: 25%;
+    height: 100%;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: #00000F;
+    z-index: 100;
+    transition: 0.2s;
+}
+
+.main__step:hover {
+    cursor: pointer;
+    margin-top: -3px;
+}
+
+.main__step:hover .step_next__block {
+    padding: 0px 0px 12px 270px;
+}
+
+.step__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 37%;
+}
+
+.step__img {
+    display: flex;
+    height: 20%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.step__name {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.step__description {
+    font-size: 15px;
+    color: #bbb;
+}
+
+.step_next__block {
+    padding: 0px 20px 12px;
+    transition: 0.2s;
 }
 
 /*                      НАВИГАЦИЯ ПО ИГРАМ                */
 
-.news__menu_news {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
 
 .news__menu-games {
     width: 870px;
     height: 78px;
     display: flex;
-    margin: 85px 0px 30px;
     padding-left: 60px;
     flex-wrap: wrap;
     position: relative;
@@ -194,7 +354,7 @@ body {
 .news__menu-games::after {
     display: block;
     content: '';
-    width: 20px;
+    width: 40px;
     height: 100%;
     position: absolute;
     right: 0;
@@ -204,7 +364,6 @@ body {
 }
 
 .news__logo-games {
-    font-family: 'Roboto', sans-serif;
     color: #ffffff;
     font-size: 16px;
     letter-spacing: 0.4px;
@@ -248,7 +407,6 @@ body {
 }
 
 .news__game-name {
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #ffffff;
     font-size: 15px;
@@ -287,7 +445,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 320px;
-    margin: 85px 30px auto auto;
+    height: 480px;
+    margin-right: 20px;
     border-radius: 4px;
     border: 1px solid transparent;
     opacity: 0.9;
@@ -319,7 +478,6 @@ body {
     margin-left: 14px;
     outline: none;
 
-    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -339,7 +497,6 @@ body {
     align-items: center;
     padding: 10px 16px 5px;
 
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 20px;
@@ -374,7 +531,6 @@ body {
 
 .tournament_name {
     margin-bottom: 2px;
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     display: flex;
     align-items: center;
@@ -382,7 +538,6 @@ body {
 }
 
 .tournament_time {
-    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     color: #5B708F;
 }
@@ -403,14 +558,118 @@ body {
     cursor: pointer;
 }
 
+.tournament__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.tournament__logo div {
+    font-size: 45px;
+}
+
+.tournament__logo a {
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.2s;
+    color: #FFFFFF;
+}
+
+.tournament__logo a:hover {
+    cursor: pointer;
+    color: #c4c0c0;
+}
+
+.main__tournaments {
+    display: flex;
+    width: 100%;
+    margin-top: 45px;
+    justify-content: space-evenly;
+}
+
+.main__tournament {
+    display: flex;
+    width: 25%;
+    height: 380px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.2s;
+    background-color: #00000F;
+}
+
+.main__tournament:hover {
+    cursor: pointer;
+    margin-top: -3px;
+}
+
+.main__tournaments_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 58%;
+}
+
+.main__tournaments_name {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.main__tournaments_description {
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+.main__tournaments_calendar_block {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.main__tournaments_reward_block {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.main__tournaments_text {
+    color: #536471;
+}
+
+.main__tournaments_button {
+    width: 80%;
+    height: 8%;
+    margin: 0px auto;
+    border: none;
+    border-radius: 9999px;
+    font-size: 15px;
+    color: #FFFFFF;
+    background-color: #bd0000;
+    transition: 0.2s;
+}
+
+.main__tournaments_button:hover {
+    cursor: pointer;
+    background: #bd000F;
+}
+
 /*                            ПОСТЫ                             */
 
 .news__posts {
     display: flex;
     flex-direction: column;
-    width: 880px;
+    width: 70%;
     opacity: 0.9;
-    border-radius: 4px;
+    border-radius: 15px;
+    margin: 30px auto;
+    padding: 10px 0px;
     box-shadow: 0px 0px 20px #000000;
     background-color: #000009;
 }
@@ -423,9 +682,8 @@ body {
 }
 
 .posts__navigation {
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    padding: 12px 12px;
+    padding: 10px 12px;
     transition: 0.2;
     color: #FFFFFF;
 }
@@ -443,11 +701,11 @@ body {
 }
 
 .post {
-    width: 800px;
-    margin: 15px auto auto 35px;
+    width: 90%;
+    margin: 15px auto auto auto;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, .2);
     border: 1px solid transparent;
-    border-radius: 4px;
+    border-radius: 15px;
     transition: 0.2s;
     background-color: #00000f;
 }
@@ -466,16 +724,19 @@ body {
 
 .post__main {
     height: 100%;
-    width: 750px;
+    width: 95%;
 }
 
 .post__name {
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
     margin: auto auto 10px 5px;
-    width: 700px;
+    width: 97%;
     color: #FFFFFF;
+}
+
+.dota__img {
+    width: 97%;
 }
 
 .post__info {
@@ -486,7 +747,6 @@ body {
 }
 
 .post__time {
-    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     color: rgb(83, 100, 113);
 }
@@ -525,7 +785,6 @@ body {
 
 .team__option {
     padding: 8px 16px;
-    font-family: 'Roboto', sans-serif;
     color: #ffffff;
     transition: 0.2s;
 }
@@ -537,13 +796,19 @@ body {
 /*                       ФУТЕР                                  */
 
 .footer {
+    width: 100%;
+    box-shadow: -10px 0px 15px #000;
+    background-color: #000;
+}
+
+.footer__container {
     display: flex;
     width: 100%;
     height: 100px;
+    max-width: 1400px;
+    margin: 0px auto;
     justify-content: space-around;
     align-items: center;
-    box-shadow: -10px 0px 15px #000;
-    background-color: #000;
 }
 
 .footer__left {
@@ -555,7 +820,6 @@ body {
 }
 
 .footer__text {
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: rgb(83, 100, 113);
     transition: 0.2s;
@@ -631,7 +895,6 @@ body {
     display: flex;
     justify-content: space-between;
     width: 520px;
-    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -647,7 +910,6 @@ body {
     border: 1px solid #000009;
     border-radius: 5px;
     box-shadow: -1px 0 8px -5px #000;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 21px;
@@ -666,7 +928,6 @@ body {
 
 .reg__email_example {
     margin-left: 30px;
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: #FFFFFF;
 }
@@ -674,7 +935,6 @@ body {
 .reg__change_info {
     width: 150px;
     margin-left: 30px;
-    font-family: 'Roboto', sans-serif;
     font-size: 15px;
     transition: 0.1s;
     color: #FFFFFF;
@@ -687,7 +947,6 @@ body {
 }
 
 .birth__logo {
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -706,7 +965,6 @@ body {
     width: 55px;
     height: 30px;
     padding-left: 10px;
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
     margin-top: 5px;
@@ -725,7 +983,6 @@ body {
 }
 
 .birth__text {
-    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -748,7 +1005,6 @@ body {
     margin-right: 25px;
     background: #bd0000;
     border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     border: none;
@@ -816,12 +1072,34 @@ body {
 
 /*                        СТРАНИЦА НОВОСТЕЙ                          */
 
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0px auto;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.news__games_tournaments {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.news__games_slider {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
 .news__block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 70px;
-    background-image: url(https://phonoteka.org/uploads/posts/2022-01/thumbs/1643147621_2-phonoteka-org-p-chernii-fon-dlya-saita-2.png);
 }
 
 .news__header {
@@ -832,7 +1110,6 @@ body {
 }
 
 .news__logo_name {
-    font-family: 'Roboto', sans-serif;
     font-size: 26px;
     font-weight: 700;
     color: #FFFFFF;
@@ -840,12 +1117,12 @@ body {
 
 .category__block {
     display: flex;
+    position: relative;
     align-items: center;
     cursor: pointer;
 }
 
 .category__name {
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #FFFFFF;
@@ -853,7 +1130,7 @@ body {
 
 .news__news {
     display: flex;
-    height: 1250px;
+    height: 1300px;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -864,8 +1141,8 @@ body {
     align-items: center;
     align-content: space-between;
     width: 600px;
-    height: 380px;
-    padding: 10px 0px;
+    height: 370px;
+    padding: 20px 20px 20px 0px;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, .2);
     border-radius: 10px;
     transition: 0.2s;
@@ -893,17 +1170,15 @@ body {
 }
 
 .news__name {
-    font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
 }
 
 .news__img {
-    width: 550px;
+    width: 510px;
 }
 
 .news__description {
-    width: 550px;
-    font-family: 'Roboto', sans-serif;
+    width: 510px;
     font-size: 13px;
     color: #FFFFFF;
 }
@@ -922,9 +1197,8 @@ body {
 
 .news__pages {
     display: flex;
-    flex-direction: column;
     width: 100px;
-    height: 40px;
+    height: 30px;
     align-items: center;
     justify-content: space-around;
     cursor: pointer;
@@ -934,14 +1208,7 @@ body {
     box-shadow: 0px 0px 10px #000000;
 }
 
-.news__pages_list {
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-}
-
 .news__page {
-    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     color: #FFFFFF;
 }
@@ -969,9 +1236,10 @@ body {
 }
 
 .category__lists {
+    display: none;
     position: absolute;
-    right: 50px;
-    top: 130px;
+    top: 50px;
+    right: 0;
     cursor: pointer;
     border-radius: 5px;
     box-shadow: 0px 0px 5px black;
@@ -992,11 +1260,196 @@ body {
     background-color: #000000;
 }
 
+/*                          СЛАЙДЕР                                  */
+
+.new-news__logo {
+    font-size: 35px;
+    margin: 25px auto;
+    color: #FFFFFF;
+}
+
+#slider {
+    /*положение слайдера*/
+    position: relative;
+    text-align: center;
+    top: 10px;
+}
+
+#slider {
+    /*центровка слайдера*/
+    margin: 0 auto;
+}
+
+#slides {
+    width: 700px;
+}
+
+#slides article {
+    /*все изображения справа друг от доруга*/
+    width: 20%;
+    float: left;
+}
+
+#slides .image {
+    /*устанавливает общий размер блока с изображениями*/
+    width: 500%;
+    line-height: 0;
+}
+
+#overflow {
+    /*сркывает все, что находится за пределами этого блока*/
+    width: 100%;
+    overflow: hidden;
+}
+
+article img {
+    /*размер изображений слайдера*/
+    width: 100%;
+    height: 380px;
+}
+
+#desktop:checked~#slider {
+    /*размер всего слайдера*/
+    max-width: 700px;
+    /*максимальнная длинна*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*настройка переключения и положения для левой стрелки*/
+/*если свич 1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch1:checked~#controls label:nth-child(5),
+#switch2:checked~#controls label:nth-child(1),
+#switch3:checked~#controls label:nth-child(2),
+#switch4:checked~#controls label:nth-child(3),
+#switch5:checked~#controls label:nth-child(4) {
+    background: url('prev.png') no-repeat;
+    /*заливка фона картинкой без повторений*/
+    float: left;
+    margin: 0 0 0 -84px;
+    /*сдвиг влево*/
+    display: block;
+    height: 68px;
+    width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch1:checked~#controls label:nth-child(2),
+#switch2:checked~#controls label:nth-child(3),
+#switch3:checked~#controls label:nth-child(4),
+#switch4:checked~#controls label:nth-child(5),
+#switch5:checked~#controls label:nth-child(1) {
+    background: url('next.png') no-repeat;
+    /*заливка фона картинкой без повторений*/
+    float: right;
+    margin: 0 -84px 0 0;
+    /*сдвиг вправо*/
+    display: block;
+    height: 68px;
+    width: 68px;
+}
+
+label,
+a {
+    /*при наведении на стрелки или переключатели - курсор изменится*/
+    cursor: pointer;
+}
+
+.all input {
+    /*скрывает стандартные инпуты (чекбоксы) на странице*/
+    display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked~#slides .image {
+    margin-left: 0;
+}
+
+#switch2:checked~#slides .image {
+    margin-left: -100%;
+}
+
+#switch3:checked~#slides .image {
+    margin-left: -200%;
+}
+
+#switch4:checked~#slides .image {
+    margin-left: -300%;
+}
+
+#switch5:checked~#slides .image {
+    margin-left: -400%;
+}
+
+#controls {
+    /*положение блока всех управляющих элементов*/
+    margin: -25% 0 0 0;
+    width: 100%;
+    height: 50px;
+}
+
+#active label {
+    /*стиль отдельного переключателя*/
+    border-radius: 10px;
+    /*скругление углов*/
+    display: inline-block;
+    /*расположение в строку*/
+    width: 15px;
+    height: 15px;
+    background: #bbb;
+    transition: 0.1s;
+}
+
+#active {
+    /*расположение блока с переключателями*/
+    margin: 20% 0 0;
+    text-align: center;
+}
+
+#active label:hover {
+    /*поведение чекбокса при наведении*/
+    background: #f58e8e;
+    border-color: #777 !important;
+    /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked~#active label:nth-child(1),
+#switch2:checked~#active label:nth-child(2),
+#switch3:checked~#active label:nth-child(3),
+#switch4:checked~#active label:nth-child(4),
+#switch5:checked~#active label:nth-child(5) {
+    background: #bd0000;
+    border-color: #bd0000 !important;
+}
+
+#slides .image {
+    /*анимация пролистывания изображений*/
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover {
+    /*прозрачность стрелок при наведении*/
+    opacity: 0.6;
+}
+
+#controls label {
+    /*прозрачность стрелок при отводе курсора*/
+    transition: opacity 0.2s ease-out;
+}
+
 /*                        МЕДИА ЗАПРОСЫ                        */
 
 @media (max-width:420px) {
     .navbar {
         height: 30px;
+    }
+
+    .navbar__container {
+        height: 100%;
+        margin: 0px;
+        max-width: 100%;
     }
 
     .navbar__logo {
@@ -1015,7 +1468,7 @@ body {
     }
 
     .navbar__account {
-        width: 20px;
+        font-size: 15px;
         margin-left: -60px;
     }
 
@@ -1054,6 +1507,7 @@ body {
 
     .menu__account {
         display: block;
+        font-size: 15px;
     }
 
     .menu__cross {
@@ -1147,6 +1601,137 @@ body {
         height: 12px;
     }
 
+    .main__page {
+        padding-top: 55px;
+    }
+
+    .main__name {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .main__description {
+        font-size: 15px;
+    }
+
+    .main__name_text {
+        height: 60%;
+    }
+
+    .main__block {
+        height: 750px;
+    }
+
+    .main__block span {
+        display: none;
+    }
+
+    .main__block img {
+        display: none;
+    }
+
+    .step_next__block {
+        padding: 0px;
+    }
+
+    .main__step:hover .step_next__block {
+        padding: 0px 0px 0px 270px !important;
+    }
+
+    .main__step:hover {
+        margin-top: 0px;
+    }
+
+    .main__name_block {
+        width: 90%;
+        height: 42%;
+        margin-top: 0px;
+    }
+
+    .main__button {
+        width: 40%;
+        height: 25%;
+    }
+
+    .main__plan {
+        flex-direction: column;
+        align-items: center;
+        height: 150%;
+    }
+
+    .main__step {
+        width: 80%;
+        height: 25%;
+    }
+
+    .tournament__logo div {
+        font-size: 25px;
+    }
+
+    .tournament__logo a {
+        font-size: 12px;
+    }
+
+    .main__tournaments {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .main__tournament {
+        width: 80%;
+        height: 340px;
+        margin-top: 10px;
+    }
+
+    .main__tournaments_top {
+        height: 60%;
+    }
+
+    .main__tournaments_description {
+        font-size: 15px;
+    }
+
+    .main__tournaments_reward_block {
+        width: 16%;
+    }
+
+    .new-news__logo {
+        width: 80%;
+        font-size: 25px;
+    }
+
+    #slides {
+        width: 300px;
+    }
+
+    article img {
+        height: 180px;
+    }
+
+    /*настройка переключения и положения для левой стрелки*/
+    /*если свич 1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+    #switch1:checked~#controls label:nth-child(5),
+    #switch2:checked~#controls label:nth-child(1),
+    #switch3:checked~#controls label:nth-child(2),
+    #switch4:checked~#controls label:nth-child(3),
+    #switch5:checked~#controls label:nth-child(4) {
+        margin: -40px 0 0 -45px;
+    }
+
+    /*настройка переключения и положения для правой стрелки*/
+    #switch1:checked~#controls label:nth-child(2),
+    #switch2:checked~#controls label:nth-child(3),
+    #switch3:checked~#controls label:nth-child(4),
+    #switch4:checked~#controls label:nth-child(5),
+    #switch5:checked~#controls label:nth-child(1) {
+        margin: -40px -45px 0 0;
+    }
+
+    #desktop:checked~#slider {
+        height: 220px;
+    }
+
     .news {
         height: 950px;
     }
@@ -1156,10 +1741,14 @@ body {
     }
 
     .news__menu-games {
-        width: 60%;
+        width: 55%;
         height: 32px;
         margin: 40px 0px 0px;
         padding-left: 10px;
+    }
+
+    .news__menu-games::after {
+        width: 20px;
     }
 
     .news__logo-games {
@@ -1214,8 +1803,8 @@ body {
         width: 120px;
         height: 22px;
         position: absolute;
-        top: -45px;
-        right: -20px;
+        top: 50px;
+        right: -8px;
     }
 
     .searchImg {
@@ -1245,8 +1834,7 @@ body {
     }
 
     .news__posts {
-        width: 270px;
-        margin: 10px 0px auto 50px;
+        width: 80%;
     }
 
     .posts__navbar {
@@ -1260,7 +1848,7 @@ body {
     }
 
     .news__span-news {
-        width: 250px;
+        width: 90%;
     }
 
     .post {
@@ -1371,6 +1959,10 @@ body {
 
     .footer {
         height: 60px;
+    }
+
+    .footer__container {
+        height: 100%;
         justify-content: space-evenly;
     }
 
@@ -1391,8 +1983,16 @@ body {
         font-size: 1em;
     }
 
-    .news__block {
-        padding-top: 35px;
+    .container {
+        padding-top: 10px;
+    }
+
+    .news__games_slider {
+        height: 300px;
+    }
+
+    .news__games_slider .all {
+        margin-left: 50px;
     }
 
     .news__header {
@@ -1450,11 +2050,6 @@ body {
 
     .news__news {
         height: 1750px;
-    }
-
-    .category__lists {
-        top: 90px;
-        right: 8px;
     }
 
     .scroll_up {

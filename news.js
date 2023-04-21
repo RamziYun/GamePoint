@@ -138,12 +138,14 @@ reg_login__later.onclick = function () {
     reg_log__modal.style.display = "none";
 };
 
-
 let category = document.getElementById('category'),
-    category__modal = document.getElementById('category__modal');
+    category__modal = document.getElementById('category__modal'),
+    category__lists = document.getElementById('category__lists');
 
-category.onclick = function() {
+category.onclick = function () {
     category__modal.style.display = "block";
+    category__lists.style.display = "block";
+
 };
 
 window.onclick = function (e) {
@@ -165,6 +167,7 @@ window.onclick = function (e) {
         reg_log__modal.style.display = "none";
     } else if (e.target == category__modal) {
         category__modal.style.display = "none";
+        category__lists.style.display = "none";
     }
 };
 
@@ -173,5 +176,41 @@ let scroll_up = document.getElementById('scroll_up');
 
 scroll_up.onclick = function (e) {
     e.preventDefault();
-    scroll({top: 0, behavior: "smooth"});
+    scroll({ top: 0, behavior: "smooth" });
 };
+
+
+let banner1 = document.getElementById("switch1"),
+    banner2 = document.getElementById("switch2"),
+    banner3 = document.getElementById("switch3"),
+    banner4 = document.getElementById("switch4"),
+    banner5 = document.getElementById("switch5"),
+    count = 0,
+    banners = {
+        0: banner1,
+        1: banner2,
+        2: banner3,
+        3: banner4,
+        4: banner5,
+    };
+
+setInterval(() => {
+    if (banner1.checked == true) {
+        count = 0;
+    } else if (banner2.checked == true) {
+        count = 1;
+    } else if (banner3.checked == true) {
+        count = 2;
+    } else if (banner4.checked == true) {
+        count = 3;
+    } else if (banner5.checked == true) {
+        count = 4;
+    }
+    if(count < 4) {
+        count = count + 1;
+        banners[count].checked = true;
+    } else {
+        banners[0].checked = true;
+        count = count - 4;
+    }
+}, 5000);
