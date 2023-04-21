@@ -1324,7 +1324,7 @@ article img {
 #switch3:checked~#controls label:nth-child(2),
 #switch4:checked~#controls label:nth-child(3),
 #switch5:checked~#controls label:nth-child(4) {
-    background: url('prev.png') no-repeat;
+    background: url('images/prev.png') no-repeat;
     /*заливка фона картинкой без повторений*/
     float: left;
     margin: 0 0 0 -84px;
@@ -1340,7 +1340,7 @@ article img {
 #switch3:checked~#controls label:nth-child(4),
 #switch4:checked~#controls label:nth-child(5),
 #switch5:checked~#controls label:nth-child(1) {
-    background: url('next.png') no-repeat;
+    background: url('images/next.png') no-repeat;
     /*заливка фона картинкой без повторений*/
     float: right;
     margin: 0 -84px 0 0;
